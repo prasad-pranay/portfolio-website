@@ -183,7 +183,7 @@ export function ArcTimeline(props: ArcTimelineProps) {
                         >
                           {step.icon}
                         </div>
-                        <p
+                        <div
                           className={cn(
                             "absolute bottom-0 left-1/2 line-clamp-3 flex w-[240px] -translate-x-1/2 translate-y-[calc(100%_+_42px)] items-center justify-center text-center text-sm transition-opacity duration-300 ease-in",
                             "text-[var(--description-color,#555555)] dark:text-[var(--description-color,#d4d4d4)]",
@@ -191,7 +191,7 @@ export function ArcTimeline(props: ArcTimelineProps) {
                           )}
                         >
                           {step.content}
-                        </p>
+                        </div>
                       </div>
                       {stepIndex === 0 && (
                         <div

@@ -18,7 +18,7 @@ type SpinningTextProps = {
   };
 };
 
-const BASE_TRANSITION = {
+const BASE_TRANSITION: Transition  = {
   repeat: Infinity,
   ease: "linear",
 };
@@ -29,7 +29,7 @@ const BASE_ITEM_VARIANTS = {
   },
   visible: {
     opacity: 1,
-  },
+  }, 
 };
 
 export function SpinningText({
@@ -39,6 +39,7 @@ export function SpinningText({
   className,
   reverse = false,
   radius = 5,
+  fontSize = 1,
   transition,
   variants,
 }: SpinningTextProps) {
@@ -95,6 +96,7 @@ export function SpinningText({
               "--index": index,
               "--total": letters.length,
               "--radius": radius,
+              fontSize: `${fontSize}rem`,
               transform: `
                   translate(-50%, -50%)
                   rotate(calc(360deg / var(--total) * var(--index)))

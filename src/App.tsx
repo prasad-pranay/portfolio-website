@@ -50,7 +50,7 @@ function App() {
   }, [prjName])
   
 
-  return (
+  return <>
     <main ref={containerRef} data-scroll-container className="overflow-hidden" onClick={(e)=>{
       if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
         setshowContext(false); // Hide menu
@@ -67,7 +67,7 @@ function App() {
       <Skills />
       <Contact />
     </main>
-  )
+        </>
 }
 
 export default App
